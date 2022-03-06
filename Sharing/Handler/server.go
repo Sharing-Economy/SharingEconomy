@@ -19,9 +19,8 @@ func Start(addr, webDir string) (err error) {
 	{
 		// 定义增改查的接口，并注册到web服务器
 
-		//todo.POST("/addSticker",addSticker)
-		//todo.POST("/isStickExist",isStickExist)
-		todo.POST("/upload",Upload)
+		todo.POST("/addSticker",addSticker)
+		todo.POST("/isStickExist",isStickExist)
 
 	}
 	// 启动web服务
