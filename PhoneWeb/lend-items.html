@@ -21,6 +21,25 @@
          <link href="static/css/app.min.css" rel="stylesheet" type="text/css">
 
 
+
+         
+
+         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+         <!-- FontAwesome CSS -->
+         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+         <!-- Slick CSS -->
+         <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+         <!-- Animate CSS -->
+         <link rel="stylesheet" href="assets/css/plugins/cssanimation.min.css">
+         <!-- IonRange slider CSS -->
+         <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
+         <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+         <!--
+             <link rel="stylesheet" href="assets/css/vendor.min.css">
+             <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+             -->
+         <!-- Main Style CSS -->
+         <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <body id="body" class="dark-sidebar">
@@ -32,42 +51,63 @@
 
     <!-- Top Bar Start -->
     <!-- Top Bar Start 头部没用的东西 -->
+
+    <div class="offcanvas-menu" id="offcanvas-menu">
+        <div class="profile-card text-center">
+            <div class="profile-card__image space-mb--10">
+                <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="profile-card__content">
+                <p class="name"> <span class="id">李熙</span></p>
+            </div>
+        </div>
+        <div class="offcanvas-navigation-wrapper space-mt--40">
+            <ul class="offcanvas-navigation">
+                <li><span class="icon"><img src="assets/img/icons/profile.svg" class="injectable" alt=""></span><a href="login.html">登录/注册</a></li>
+                <li><span class="icon"><img src="assets/img/icons/profile-two.svg" class="injectable" alt=""></span><a href="profile.html">我的主页</a></li>
+                <li><span class="icon"><img src="assets/img/icons/cart-three.svg" class="injectable" alt=""></span><a href="lend-items.html">上传物品</a></li>
+                <li><span class="icon"><img src="assets/img/icons/product.svg" class="injectable" alt=""></span><a href="shop.html">我租入的物品</a></li>
+                <li><span class="icon"><img src="assets/img/icons/cart-two.svg" class="injectable" alt=""></span><a href="order.html">我借出的物品</a></li>
+
+                <li><span class="icon"><img src="assets/img/icons/wishlist.svg" class="injectable" alt=""></span><a href="wishlist.html">我的公益</a></li>
+   
+             
+            </ul>
+        </div>
+    </div>
     <div class="topbar">            
         <!-- Navbar -->
         <nav class="navbar-custom" id="navbar-custom">    
             <ul class="list-unstyled topbar-nav float-end mb-0">
                   
             
+                <li>
+                    <button class=" button-menu-mobile nav-icon" id="header-menu-trigger">
+                        <i class="ti ti-menu-2"></i>
+                    </button>
+                </li> 
+
+                
+            </ul><!--end topbar-nav-->
+
+            <ul class="list-unstyled topbar-nav mb-0">                        
+                
+
                 <li class="dropdown notification-list">
-                    <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="profile.html" role="button" aria-haspopup="false" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle arrow-none nav-icon"  href="index.html" role="button" aria-haspopup="false" aria-expanded="false">
                         <i class="ti ti-power"></i>
                     </a>
                    
                 </li>
 
                 <li class="dropdown notification-list">
-                    <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="profile.html" role="button" aria-haspopup="false" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle arrow-none nav-icon"  href="profile.html" role="button" aria-haspopup="false" aria-expanded="false">
                         <i class="ti ti-user"></i>
                         
                     </a>
                  
                 </li>
-
-                
-            </ul><!--end topbar-nav-->
-
-            <ul class="list-unstyled topbar-nav mb-0">                        
-                <li>
-                    <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
-                        <i class="ti ti-menu-2"></i>
-                    </button>
-                </li> 
-                <li class="hide-phone app-search">
-                    <form role="search" action="#" method="get">
-                        <input type="search" name="search" class="form-control top-search mb-0" placeholder="Type text...">
-                        <button type="submit"><i class="ti ti-search"></i></button>
-                    </form>
-                </li>                       
+                                     
             </ul>
 
             
@@ -115,11 +155,13 @@
                                         
                                       
                                         <div class="row">
-                                            <form>
+
+
+                                            <form method="post" action="">
                                                 <div class="row g-3 align-items-center">
                                                     <div class="col-md-6">
                                                         <label for="" class="form-label">物品名称</label>
-                                                        <input type="text" class="form-control" id="" required="">
+                                                        <input type="text" class="form-control" name="goods-name" value="">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <label class="form-label">物品成色</label>
@@ -196,6 +238,82 @@
     <script>
         const tobii = new Tobii()
     </script>
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        //绑定滚动条事件
+        //绑定滚动条事件
+        $(window).bind("scroll", function () {
+            var sTop = $(window).scrollTop();
+            var sTop = parseInt(sTop);
+            if (sTop >= 10) {
+                if (!$("#scrollBg").is(":visible")) {
+                    try {
+                        $("#scrollBg").slideDown();
+                    } catch (e) {
+                        $("#scrollBg").show();
+                    }
+                }
+            }
+            else {
+                if ($("#scrollBg").is(":visible")) {
+                    try {
+                        $("#scrollBg").slideUp();
+                    } catch (e) {
+                        $("#scrollBg").hide();
+                    }
+                }
+            }
+        });
+    })
+</script>
+<script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IonRanger JS -->
+    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+    <!-- SVG inject JS -->
+    <script src="assets/js/plugins/svg-inject.min.js"></script>
+    <!-- Slick slider JS -->
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+    <!--
+  <script src="assets/js/plugins/plugins.min.js"></script>
+-->
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+	
+    function uploadIitems()
+ {
+ 	var str = document.getElementById("text").value;	
+    $.ajax
+    ({
+    	url: "/lend-items",
+		dataType: "json",
+		type: "post",
+		data: { 
+			    address: str,  			
+				key: "7486e10d3ca83a934438176cf941df0c", 
+			  },
+	    success:function(res){
+		     
+		       console.log(res);  //在console中查看数据
+		},
+	    error:function(){
+	    	alert('failed!');
+	    },
+    });
+ }
+</script>
 
 </body>
 
