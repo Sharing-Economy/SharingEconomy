@@ -15,12 +15,13 @@ func Start(addr, webDir string) (err error) {
 	}
 
 	// api接口服务，定义了路由组 /Sharing
-	todo := r.Group("")
+	todo := r.Group("/Sharing")
 	{
 		// 定义增改查的接口，并注册到web服务器
 
 		todo.POST("/addSticker",addSticker)
 		todo.POST("/isStickExist",isStickExist)
+		todo.POST("/upload",upload)
 
 	}
 	// 启动web服务
