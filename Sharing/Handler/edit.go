@@ -57,17 +57,16 @@ func isStickExist(c *gin.Context)  {
 }
 
 func upload(c *gin.Context) {
-	f, err := c.FormFile("file")
+	f, err := c.FormFile("files")
+	fmt.Println(f)
 	if err != nil {
-	fmt.Println(err)
+		fmt.Println(err)
+		respError(c,err)
 		return
 	} else {
 		fileExt:=strings.ToLower(path.Ext(f.Filename))
 		if fileExt!=".png"&&fileExt!=".jpg"&&fileExt!=".gif"&&fileExt!=".jpeg"{
-			c.JSON(200, gin.H{
-				"code": 400,
-				"msg":  "上传失败!只允许png,jpg,gif,jpeg文件",
-			})
+			respOK(c, "OK！")
 			return
 		}
 		fileName:=f.Filename
