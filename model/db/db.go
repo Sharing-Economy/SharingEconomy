@@ -30,7 +30,7 @@ func InitDB() (err error) {
 }
 //新增一条请求记录
 func Insert(address string,amount int64) error {
-	var sqlStr = "insert into address_huangcuihua (address,amount) values (?,?)"
+	var sqlStr = "insert into address (address,amount) values (?,?)"
 	_, err := db.Exec(sqlStr, address, amount)
 	if err != nil {
 		fmt.Println("insertErr:",err)

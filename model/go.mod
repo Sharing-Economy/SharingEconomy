@@ -1,4 +1,4 @@
-module ShareFish
+module goPro
 
 go 1.16
 

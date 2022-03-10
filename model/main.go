@@ -2,18 +2,17 @@ package main
 
 import (
 	"fmt"
-	"ShareFish/cfg"
-	"ShareFish/db"
-	"ShareFish/handler"
+	"goPro/cfg"
+	"goPro/handler"
 )
 
 func main() {
 	//初始化数据库
-	err :=db.InitDB()
-	if err != nil {
-		fmt.Printf("数据库服务错误:%v\n", err)
-		return
-	}
+	//err :=db.InitDB()
+	//if err != nil {
+	//	fmt.Printf("数据库服务错误:%v\n", err)
+	//	return
+	//}
 
 	// 载入配置文件
 	c, err := cfg.LoadConfig("cfg.json")

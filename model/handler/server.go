@@ -11,12 +11,12 @@ func Server(addr,webDir string) (err error) {
 	// 静态文件服务
 	if len(webDir) > 0 {
 		// 将一个目录下的静态文件，并注册到web服务器
-		r.Static("/web", webDir)
+		r.Static("/", webDir)
 	}
 	//设置路由组
-	hch := r.Group("")
+	router := r.Group("")
 	{
-		hch.POST("/index", SendContract)
+		router.POST("/index", Upload)
 	}
 
 	r.Run(addr)
