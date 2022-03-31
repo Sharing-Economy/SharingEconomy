@@ -1,42 +1,27 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rick | Mobile eCommerce HTML Template</title>
+    <title>Share Fish</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.ico">
-    <!-- CSS
-	============================================ -->
-    <!-- Bootstrap CSS -->
+
+    <script src="static/js/public.js"></script>
+    <link rel="stylesheet" href="css/tabbar.css">
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- Slick CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/cssanimation.min.css">
-    <!-- IonRange slider CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
-    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
-    <!--
-		<link rel="stylesheet" href="assets/css/vendor.min.css">
-		<link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-		-->
-    <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- App css搜索框 -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/app.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <!--====================  preloader area ====================-->
-    <div class="preloader-activate preloader-active">
-        <div class="preloader-area-wrap">
-            <div class="spinner d-flex justify-content-center align-items-center h-100">
-                <div class="img-loader"></div>
-            </div>
-        </div>
-    </div>
+
     <!--====================  End of preloader area  ====================-->
     <div class="body-wrapper bg-color--gradient space-pt--70 space-pb--120">
         <!--====================  header area ====================-->
@@ -48,41 +33,31 @@
                             <!-- header logo -->
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" class="img-fluid" alt="">
+                                    <img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
                                 </a>
                             </div>
                         </div>
                         <div class="col d-flex justify-content-center">
-                            <!-- header search -->
+                            <!-- 搜索框 -->
                             <div class="header-search">
-                                <form>
-                                    <input type="text" id="header-search-input" placeholder="Search anything">
-                                  
-                                </form>
+                                <a href="search-page.html">
+                                    <div class="input-group">
+                                        <input type="text" id="chat-search" name="chat-search" class="form-control"
+                                            placeholder="搜索好物" style="    padding-left: 30px;">
+                                </a>
+
+                                <span style="position: absolute;padding-top: 7px;padding-left: 10px;
+                                       "><i class="fa fa-search"></i></span>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <!-- header menu trigger -->
-                            <button class="header-menu-trigger" id="header-menu-trigger">
-                                <img src="assets/img/icons/menu.svg" class="injectable" alt="">
-                            </button>
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button class="header-menu-trigger" id="header-menu-trigger">
+                            <i class="fas fa-align-right" style="font-size: 20px;
+                                color: grey;"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
-            <!-- search keywords -->
-            <div class="search-keyword-area space-xy--15 bg-color--grey2" id="search-keyword-box">
-                <div class="search-keyword-header space-mb--20">
-                    <h4 class="search-keyword-header__title">Hot Keywords</h4>
-                </div>
-                <ul class="search-keywords">
-                    <li><a href="search.html">Shoes</a></li>
-                    <li><a href="search.html">Fashion Bag</a></li>
-                    <li><a href="search.html">Light Bag</a></li>
-                    <li><a href="search.html">Parts</a></li>
-                    <li><a href="search.html">Sport Shoes</a></li>
-                    <li><a href="search.html">Travel Bag</a></li>
-                </ul>
             </div>
         </header>
         <!--====================  End of header area  ====================-->
@@ -93,176 +68,234 @@
                     <img src="assets/img/profile.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="profile-card__content">
-                    <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">张三</span></p>
+                    <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
                 </div>
             </div>
             <div class="offcanvas-navigation-wrapper space-mt--40">
                 <ul class="offcanvas-navigation">
-                    <li><span class="icon"><img src="assets/img/icons/profile.svg" class="injectable" alt=""></span><a href="login.html">登录/注册</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/profile-two.svg" class="injectable" alt=""></span><a href="profile.html">我的主页</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/cart-three.svg" class="injectable" alt=""></span><a href="lend-items.html">上传物品</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/product.svg" class="injectable" alt=""></span><a href="shop.html">我租入的物品</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/cart-two.svg" class="injectable" alt=""></span><a href="order.html">我借出的物品</a></li>
-
-                    <li><span class="icon"><img src="assets/img/icons/wishlist.svg" class="injectable" alt=""></span><a href="wishlist.html">我的公益</a></li>
-       
-                 
+                    <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
+                            href="login.html">登录/注册</a></li>
+                    <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
+                            href="profile.html">我的主页</a></li>
+                    <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
+                            href="lend-items.html">上传物品</a></li>
+                    <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
+                            href="shop.html">我租入的物品</a></li>
+                    <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
+                            href="order.html">我借出的物品</a></li>
+                    <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
+                            onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <!--====================  End of mobile menu overlay  ====================-->
         <!--====================  profile header ====================-->
-        <div class="profile-header-area space-pt--30 space-mb--40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="profile-header">
-                            <div class="profile-header__image">
-                                <img src="assets/img/profile.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="profile-header__content space-mt--10">
-                                <h3 class="name space-mb--15">0x5B38Da6a701c568545dCfcB03F</h3>
-                                <div class="profile-info space-mb--10">
-                                    <div class="profile-info-block">
-                                        <div class="profile-info-block__value">
-                                            ETH 500
-                                        </div>
-                                        <div class="profile-info-block__title">
-                                            我的余额
+
+        <div class="shop-header bg-color--grey">
+            <div class="container space-y--15">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <a class="back-link" onClick="javascript :history.back(-1);"> <i class="fa fa-angle-left"></i>
+                            返回</a>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="category-title text-center">我的主页</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-header-area space-pt--30 space-mb--40">
+                <div class="container">
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="profile-header">
+                                <!-- <div class="profile-header__image">
+                                    <a href="mod-picure.html">
+                                        <img src="assets/img/profile.jpg" class="img-fluid" alt=""></a>
+                                </div> -->
+                                <div id="addCommodityIndex">
+                                    <div class="input-group row">
+                                        
+                                        <div class="col-sm-9 big-photo">
+                                            <div id="preview">
+                                                <img id="imghead" border="0" src="images/photo_icon.png" width="90"
+                                                    height="90" onclick="$('#previewImg').click();">
+                                            </div>
+                                            <input type="file" onchange="previewImage(this)" style="display: none;"
+                                                id="previewImg">
                                         </div>
                                     </div>
-                                    <div class="profile-info-block">
-                                        <div class="profile-info-block__value">
-                                            25
-                                        </div>
-                                        <div class="profile-info-block__title">
-                                            我的订单
-                                        </div>
-                                    </div>
+                                    <!--input-group end-->
+
                                 </div>
-                                <div class="profile-level">
-                                    <div class="profile-level__title">
-                                        Level 04
+                                <div class="profile-header__content " style=" padding-left: 12px;">
+                                    <h3 class="name space-mb--15">0x5B38Da6a701c568545dCfcB03F</h3>
+                                    <div class="profile-info space-mb--10">
+                                        <div class="profile-info-block">
+                                            <div class="profile-info-block__value">
+                                                ETH 500
+                                            </div>
+                                            <div class="profile-info-block__title">
+                                                我的余额
+                                            </div>
+                                        </div>
+                                        <div class="profile-info-block">
+                                            <div class="profile-info-block__value">
+                                                25
+                                            </div>
+                                            <div class="profile-info-block__title">
+                                                <a href="cart.html">我的交易</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="profile-level__progress progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--====================  End of profile header  ====================-->
-        <!--====================  profile body ====================-->
-        <div class="profile-body-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        
-                        <div class="profile-body">
-
-                            
-                            <div class="profile-info-table space-mb--40">
-                                
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">User Name</div>
-                                    <div class="profile-info-block__value">张三</div>
-                                </div>
-                                <div class="profile-info-block">
+            <!--====================  End of profile header  ====================-->
+            <!--====================  profile body ====================-->
+            <div class="profile-body-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="profile-body">
+                                <div class="profile-info-table space-mb--40">
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title">姓名</div>
+                                        <div class="profile-info-block__value">John</div>
+                                    </div>
+                                    <!-- <div class="profile-info-block">
                                     <div class="profile-info-block__title">Phone</div>
                                     <div class="profile-info-block__value">935-1670</div>
+                                </div> -->
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title">邮箱</div>
+                                        <div class="profile-info-block__value">12581@mail.com</div>
+                                    </div>
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title">个性签名</div>
+                                        <div class="profile-info-block__value">暂无</div>
+                                    </div>
+
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title">修改个人信息</div>
+                                        <div class="profile-info-block__value"><a href="edit-profile.html"><i
+                                                    class="ti ti-edit"></i></a></div>
+                                    </div>
                                 </div>
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">E-mail Address</div>
-                                    <div class="profile-info-block__value">demo@mail.com</div>
+
+                                <div class="profile-info-table">
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title"><a href="shop.html">我的物品</a></div>
+                                        <div class="profile-info-block__value">23</div>
+                                    </div>
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title"><a href="wishlist.html">我的积分</a></div>
+                                        <div class="profile-info-block__value">223</div>
+                                    </div>
+                                    <div class="profile-info-block">
+                                        <div class="profile-info-block__title"><a href="wishlist.html">我的公益</a></div>
+                                        <div class="profile-info-block__value">10</div>
+                                    </div>
                                 </div>
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">Shipping Address</div>
-                                    <div class="profile-info-block__value">935-1670 Neque. St. Centennial Delaware 48432</div>
-                                </div>
-                                
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">Edit Profile</div>
-                                    <div class="profile-info-block__value"><a href="edit-profile.html"><img src="assets/img/icons/edit.svg" class="injectable" alt=""></a></div>
-                                </div>
+
+
                             </div>
-
-
-
-                            <div class="profile-info-table">
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">我的物品</div>
-                                    <div class="profile-info-block__value">23</div>
-                                </div>
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">我的积分</div>
-                                    <div class="profile-info-block__value">223</div>
-                                </div>
-                                <div class="profile-info-block">
-                                    <div class="profile-info-block__title">我的公益</div>
-                                    <div class="profile-info-block__value">10</div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
+            <!--====================  End of profile body  ====================-->
+            <!--====================  footer area ====================-->
+            <footer>
+
+                <div class="sc-bottom-bar">
+                    <a class="sc-menu-item" href="index.html"><i class="fas fa-home"></i></a>
+                    <a class="sc-menu-item " href="goods-category.html"><i class="fas  fa-list"></i></a>
+                    <a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
+
+                    <a class="sc-menu-item" href="cart.html"><i class="fas fa-clipboard"></i></a>
+
+
+                    <a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
+                </div>
+
+            </footer>
+            <!--====================  End of footer area  ====================-->
         </div>
-        <!--====================  End of profile body  ====================-->
-        <!--====================  footer area ====================-->
-        <footer>
-            <div class="footer-nav-wrapper">
-                <a href="index.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/home.svg" class="injectable" alt="">
-                        <span>首页</span>
-                    </div>
-                </a>
-                <a href="chat.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/chat.svg" class="injectable" alt="">
-                        <span>需求</span>
-                    </div>
-                </a>
-                <a href="cart.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/cart.svg" class="injectable" alt="">
-                        <span>订单</span>
-                    </div>
-                </a>
-                <a href="profile.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/profile.svg" class="injectable" alt="">
-                        <span>个人中心</span>
-                    </div>
-                </a>
-            </div>
-        </footer>
-        <!--====================  End of footer area  ====================-->
-    </div>
-    <!-- JS
-    ============================================ -->
-    <!-- Modernizer JS -->
-    <script src="assets/js/modernizr-2.8.3.min.js"></script>
-    <!-- jQuery JS -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- IonRanger JS -->
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-    <!-- SVG inject JS -->
-    <script src="assets/js/plugins/svg-inject.min.js"></script>
-    <!-- Slick slider JS -->
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
-    <!--
-  <script src="assets/js/plugins/plugins.min.js"></script>
--->
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+        <script src="js/popbox.js"></script>
+        <script>
+            function okFunction() {
+                window.location.href = "login.html";
+            }
+            function cancelFunction() {
+                alert('Cancel!');
+            }
+        </script>
+        <script>
+            //图片上传预览    IE是用了滤镜。
+            function previewImage(file) {
+                var MAXWIDTH = 90;
+                var MAXHEIGHT = 90;
+                var div = document.getElementById('preview');
+                if (file.files && file.files[0]) {
+                    div.innerHTML = '<img id=imghead onclick=$("#previewImg").click()>';
+                    var img = document.getElementById('imghead');
+                    img.onload = function () {
+                        var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                        img.width = rect.width;
+                        img.height = rect.height;
+                        //                 img.style.marginLeft = rect.left+'px';
+                        img.style.marginTop = rect.top + 'px';
+                    }
+                    var reader = new FileReader();
+                    reader.onload = function (evt) { img.src = evt.target.result; }
+                    reader.readAsDataURL(file.files[0]);
+                }
+                else //兼容IE
+                {
+                    var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+                    file.select();
+                    var src = document.selection.createRange().text;
+                    div.innerHTML = '<img id=imghead>';
+                    var img = document.getElementById('imghead');
+                    img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+                    var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                    status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width + ',' + rect.height);
+                    div.innerHTML = "<div id=divhead style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;" + sFilter + src + "\"'></div>";
+                }
+            }
+            function clacImgZoomParam(maxWidth, maxHeight, width, height) {
+                var param = { top: 0, left: 0, width: width, height: height };
+                if (width > maxWidth || height > maxHeight) {
+                    rateWidth = width / maxWidth;
+                    rateHeight = height / maxHeight;
+
+                    if (rateWidth > rateHeight) {
+                        param.width = maxWidth;
+                        param.height = Math.round(height / rateWidth);
+                    } else {
+                        param.width = Math.round(width / rateHeight);
+                        param.height = maxHeight;
+                    }
+                }
+                param.left = Math.round((maxWidth - param.width) / 2);
+                param.top = Math.round((maxHeight - param.height) / 2);
+                return param;
+            }
+        </script>
 </body>
+
 </html>

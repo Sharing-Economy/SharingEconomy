@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rick | Mobile eCommerce HTML Template</title>
+    <title>Share Fish-我的交易</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/favicon.ico">
-    <!-- CSS
-	============================================ -->
+    <script src="static/js/public.js"></script>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/jd_cart.css">
+   <link rel="stylesheet" href="css/tabbar.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <!-- Slick CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/cssanimation.min.css">
-    <!-- IonRange slider CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
-    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
-    <!--
-		<link rel="stylesheet" href="assets/css/vendor.min.css">
-		<link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-		-->
-    <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- App css -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/app.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <!--====================  preloader area ====================-->
     <div class="preloader-activate preloader-active">
@@ -51,41 +39,31 @@
                             <!-- header logo -->
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" class="img-fluid" alt="">
+                                    <img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
                                 </a>
                             </div>
                         </div>
                         <div class="col d-flex justify-content-center">
-                            <!-- header search -->
+                            <!-- 搜索框 -->
                             <div class="header-search">
-                                <form>
-                                    <input type="text" id="header-search-input" placeholder="Search anything">
-                                   
-                                </form>
+                                <a href="search-page.html">
+                                    <div class="input-group">
+                                        <input type="text" id="chat-search" name="chat-search" class="form-control"
+                                            placeholder="搜索好物" style="    padding-left: 30px;">
+                                </a>
+
+                                <span style="position: absolute;padding-top: 7px;padding-left: 10px;
+                                       "><i class="fa fa-search"></i></span>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <!-- header menu trigger -->
-                            <button class="header-menu-trigger" id="header-menu-trigger">
-                                <img src="assets/img/icons/menu.svg" class="injectable" alt="">
-                            </button>
-                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button class="header-menu-trigger" id="header-menu-trigger">
+                            <i class="fas fa-align-right" style="font-size: 20px;
+                                color: grey;"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
-            <!-- search keywords -->
-            <div class="search-keyword-area space-xy--15 bg-color--grey2" id="search-keyword-box">
-                <div class="search-keyword-header space-mb--20">
-                    <h4 class="search-keyword-header__title">Hot Keywords</h4>
-                </div>
-                <ul class="search-keywords">
-                    <li><a href="search.html">Shoes</a></li>
-                    <li><a href="search.html">Fashion Bag</a></li>
-                    <li><a href="search.html">Light Bag</a></li>
-                    <li><a href="search.html">Parts</a></li>
-                    <li><a href="search.html">Sport Shoes</a></li>
-                    <li><a href="search.html">Travel Bag</a></li>
-                </ul>
             </div>
         </header>
         <!--====================  End of header area  ====================-->
@@ -96,20 +74,24 @@
                     <img src="assets/img/profile.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="profile-card__content">
-                    <p class="name">Don Normane <span class="id">ID MD 4350</span></p>
+                    <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
                 </div>
             </div>
             <div class="offcanvas-navigation-wrapper space-mt--40">
                 <ul class="offcanvas-navigation">
-                    <li><span class="icon"><img src="assets/img/icons/profile.svg" class="injectable" alt=""></span><a href="login.html">Login / Sign up</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/profile-two.svg" class="injectable" alt=""></span><a href="profile.html">My Profile</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/cart-three.svg" class="injectable" alt=""></span><a href="lend-items.html">上传物品</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/product.svg" class="injectable" alt=""></span><a href="shop.html">我租入的物品</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/cart-two.svg" class="injectable" alt=""></span><a href="order.html">我借出的物品</a></li>
-
-                    <li><span class="icon"><img src="assets/img/icons/wishlist.svg" class="injectable" alt=""></span><a href="wishlist.html">我的公益</a></li>
-       
-                 
+                    <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
+                            href="login.html">登录/注册</a></li>
+                    <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
+                            href="profile.html">我的主页</a></li>
+                    <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
+                            href="lend-items.html">上传物品</a></li>
+                    <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
+                            href="shop.html">我租入的物品</a></li>
+                    <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
+                            href="order.html">我借出的物品</a></li>
+                    <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
+                            onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -119,250 +101,379 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-3">
-                        <a href="index.html" class="back-link"> <i class="fa fa-angle-left"></i> Back</a>
+                        <a class="back-link" onClick="javascript :history.back(-1);"> <i class="fa fa-angle-left"></i>
+                            返回</a>
                     </div>
                     <div class="col-6">
-                        <h4 class="page-title text-center">我的订单</h4>
+                        <h4 class="page-title text-center">我的交易</h4>
                     </div>
                 </div>
             </div>
         </div>
         <!--====================  End of breadcrumb area  ====================-->
         <!--====================  cart product area ====================-->
-        <div class="jd_shop">
-        
-            <div class="jd_shop_con">
-                <div class="product">
-                    <div class="check_box">
-                        <a href="#" class="jd_check_box" checked></a>
-                    </div>
-                    <div class="shop_info clearfix">
-                        <a href="#" class="img_box f_left"><img src="assets/img/products/product3.png" alt=""></a>
-                        <div class="info_box">
-                            <a class="p_name" href="#">1华为（HUAWEI）荣耀华为1（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 </a>
-                            <p class="p_price">&yen;1000.00</p>
-                            <div class="p_opition">
-                               <div class="change_num f_left">
-                                   <span>-</span>
-                                   <input type="tel">
-                                   <span>+</span>
-                               </div>
-                               <div class="delete_box f_right">
-                                   <span class="delete_up"></span>
-                                   <span class="delete_down"></span>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="check_box">
-                        <a href="#" class="jd_check_box" checked></a>
-                    </div>
-                    <div class="shop_info clearfix">
-                        <a href="#" class="img_box f_left"><img src="assets/img/products/product2.png" alt=""></a>
-                        <div class="info_box">
-                            <a class="p_name" href="#">2华为（HUAWEI）荣耀华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 </a>
-                            <p class="p_price">&yen;1000.00</p>
-                            <div class="p_opition">
-                               <div class="change_num f_left">
-                                   <span>-</span>
-                                   <input type="tel">
-                                   <span>+</span>
-                               </div>
-                               <div class="delete_box f_right">
-                                   <span class="delete_up"></span>
-                                   <span class="delete_down"></span>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="check_box">
-                        <a href="#" class="jd_check_box" checked></a>
-                    </div>
-                    <div class="shop_info clearfix">
-                        <a href="#" class="img_box f_left"><img src="assets/img/products/product1.png" alt=""></a>
-                        <div class="info_box">
-                            <a class="p_name" href="#">3华为（HUAWEI）荣耀华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 </a>
-                            <p class="p_price">&yen;1000.00</p>
-                            <div class="p_opition">
-                               <div class="change_num f_left">
-                                   <span>-</span>
-                                   <input type="tel">
-                                   <span>+</span>
-                               </div>
-                               <div class="delete_box f_right">
-                                   <span class="delete_up"></span>
-                                   <span class="delete_down"></span>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                <div class="product">
-                        <div class="check_box">
-                            <a href="#" class="jd_check_box" checked></a>
-                        </div>
-                        <div class="shop_info clearfix">
-                            <a href="#" class="img_box f_left"><img src="assets/img/products/product3.png" alt=""></a>
-                            <div class="info_box">
-                                <a class="p_name" href="#">4华为（HUAWEI）荣耀华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 </a>
-                                <p class="p_price">&yen;1000.00</p>
-                                <div class="p_opition">
-                                   <div class="change_num f_left">
-                                       <span>-</span>
-                                       <input type="tel">
-                                       <span>+</span>
-                                   </div>
-                                   <div class="delete_box f_right">
-                                       <span class="delete_up"></span>
-                                       <span class="delete_down"></span>
-                                   </div>
+        <div class="row" style="margin-right: 0px;">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body p-0">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#Post" role="tab"
+                                    aria-selected="true">在租</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#Gallery" role="tab"
+                                    aria-selected="false">下架</a>
+                            </li>
+
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane p-3 active" id="Post" role="tabpanel">
+
+                                <div class="row">
+                                    <div class="card">
+                                        <!-- <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">                      
+                                                    <h4 class="card-title">On items</h4>                      
+                                                </div>                                      
+                                            </div>                                
+                                        </div> -->
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th class="border-top-0">商品</th>
+                                                            <th class="border-top-0">状态</th>
+                                                            <th class="border-top-0">操作</th>
+                                                        </tr>
+                                                        <!--end tr-->
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="media">
+                                                                    <img src="images/pro.png" height="30"
+                                                                        class="me-3 align-self-center rounded"
+                                                                        alt="...">
+                                                                    <div class="media-body align-self-center">
+                                                                        <h6 class="m-0" name="goodsName" id="goodsName">
+                                                                            摄像头</h6>
+                                                                        <a href="#" class="font-12 text-primary"
+                                                                            name="rent" id="rent">ID: A3652</a>
+                                                                    </div>
+                                                                    <!--end media body-->
+                                                                </div>
+                                                            </td>
+
+                                                            <td><span class="badge badge-soft-warning px-2">未借</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="dropdown d-inline-block float-right">
+                                                                    <a class="nav-link dropdown-toggle arrow-none"
+                                                                        id="dLabel8" data-bs-toggle="dropdown" href="#"
+                                                                        role="button" aria-haspopup="false"
+                                                                        aria-expanded="false">
+                                                                        <i
+                                                                            class="fas fa-ellipsis-v font-20 text-muted"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                                        aria-labelledby="dLabel8">
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModalSend"
+                                                                            href="#">编辑</a>
+                                                                        <a class="dropdown-item" href="#">下架</a>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <!--end tr-->
+                                                        <tr>
+                                                            <td>
+                                                                <div class="media">
+                                                                    <img src="static/picture/02.png" height="30"
+                                                                        class="me-3 align-self-center rounded"
+                                                                        alt="...">
+                                                                    <div class="media-body align-self-center">
+                                                                        <h6 class="m-0">运动鞋</h6>
+                                                                        <a href="#" class="font-12 text-primary">ID:
+                                                                            A5002</a>
+                                                                    </div>
+                                                                    <!--end media body-->
+                                                                </div>
+                                                            </td>
+
+                                                            <td><span class="badge badge-soft-primary px-2">已借出</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="dropdown d-inline-block float-right">
+                                                                    <a class="nav-link dropdown-toggle arrow-none"
+                                                                        id="dLabel8" data-bs-toggle="dropdown" href="#"
+                                                                        role="button" aria-haspopup="false"
+                                                                        aria-expanded="false">
+                                                                        <i
+                                                                            class="fas fa-ellipsis-v font-20 text-muted"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                                        aria-labelledby="dLabel8">
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#exampleModalSend"
+                                                                            href="#">编辑</a>
+                                                                        <a class="dropdown-item" href="#">下架</a>
+
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModalSend"
+                                                                        tabindex="-1"
+                                                                        aria-labelledby="exampleModalSendLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h6 class="modal-title m-0"
+                                                                                        id="exampleModalDefaultSend">
+                                                                                        编辑物品信息</h6>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class=" mb-2">
+                                                                                        <label
+                                                                                            for="toaddress">租金</label>
+                                                                                        <div class="input-group">
+                                                                                            <input type="text"
+                                                                                                class="form-control"
+                                                                                                placeholder=""
+                                                                                                aria-label="Scancode">
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="mb-2">
+                                                                                        <label
+                                                                                            for="cryptocurrency">物品类别</label>
+                                                                                        <select class="form-select"
+                                                                                            aria-label="Default select example">
+                                                                                            <option selected="">--
+                                                                                                Cateogory --</option>
+                                                                                            <option value="BTC">服饰
+                                                                                            </option>
+                                                                                            <option value="ETH">其他
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+
+                                                                                    <div class="mb-2">
+                                                                                        <label
+                                                                                            for="Description">商品描述</label>
+                                                                                        <textarea class="form-control"
+                                                                                            rows="3"
+                                                                                            aria-label="With textarea"></textarea>
+                                                                                    </div>
+                                                                                    <div class=" mb-2">
+                                                                                        <label
+                                                                                            for="toaddress">押金</label>
+                                                                                        <div class="input-group">
+                                                                                            <input type="text"
+                                                                                                class="form-control"
+                                                                                                placeholder=""
+                                                                                                aria-label="Scancode">
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <!--end modal-body-->
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-de-danger btn-sm"
+                                                                                        data-bs-dismiss="modal">关闭</button>
+                                                                                    <button
+                                                                                        class="btn btn-de-primary btn-sm"
+                                                                                        type="button">确定</button>
+                                                                                </div>
+                                                                                <!--end modal-footer-->
+                                                                            </div>
+                                                                            <!--end modal-content-->
+                                                                        </div>
+                                                                        <!--end modal-dialog-->
+                                                                    </div>
+                                                                    <!--end modal-->
+                                                                </div>
+                                                            </td>
+
+                                                    </tbody>
+                                                </table>
+                                                <!--end table-->
+                                            </div>
+                                            <!--end /div-->
+                                        </div>
+                                        <!--end card-body-->
+                                    </div>
+                                    <!--end card-->
                                 </div>
+                                <!--end col-->
+
                             </div>
-                        </div>
-                    </div>
-                <div class="product">
-                        <div class="check_box">
-                            <a href="#" class="jd_check_box" checked></a>
-                        </div>
-                        <div class="shop_info clearfix">
-                            <a href="#" class="img_box f_left"><img src="assets/img/products/product1.png" alt=""></a>
-                            <div class="info_box">
-                                <a class="p_name" href="#">9华为（HUAWEI）荣耀华为（HUAWEI）荣耀平板优享版 Wifi 8英寸平板电脑（高通骁龙 64位四核1280×800 </a>
-                                <p class="p_price">&yen;1000.00</p>
-                                <div class="p_opition">
-                                   <div class="change_num f_left">
-                                       <span>-</span>
-                                       <input type="tel">
-                                       <span>+</span>
-                                   </div>
-                                   <div class="delete_box f_right">
-                                       <span class="delete_up"></span>
-                                       <span class="delete_down"></span>
-                                   </div>
+                            <div class="tab-pane p-3" id="Gallery" role="tabpanel">
+
+
+                                <div class="row">
+                                    <div class="card">
+                                        <!-- <div class="card-header">
+                                            <div class="row align-items-center">
+                                                <div class="col">                      
+                                                    <h4 class="card-title">Items from the shelves</h4>                      
+                                                </div>                                      
+                                            </div>                                
+                                        </div> -->
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th class="border-top-0">商品</th>
+                                                            <th class="border-top-0">租金</th>
+                                                            <th class="border-top-0">操作</th>
+                                                        </tr>
+                                                        <!--end tr-->
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="media">
+                                                                    <img src="images/pro.png" height="30"
+                                                                        class="me-3 align-self-center rounded"
+                                                                        alt="...">
+                                                                    <div class="media-body align-self-center">
+                                                                        <h6 class="m-0">摄像头</h6>
+                                                                        <a href="#" class="font-12 text-primary">ID:
+                                                                            A3652</a>
+                                                                    </div>
+                                                                    <!--end media body-->
+                                                                </div>
+                                                            </td>
+                                                            <td>$50 <del class="text-muted font-10">$70</del></td>
+
+
+                                                            <td>
+                                                                <div class="dropdown d-inline-block float-right">
+                                                                    <a class="nav-link dropdown-toggle arrow-none"
+                                                                        id="dLabel8" data-bs-toggle="dropdown" href="#"
+                                                                        role="button" aria-haspopup="false"
+                                                                        aria-expanded="false">
+                                                                        <i
+                                                                            class="fas fa-ellipsis-v font-20 text-muted"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                                        aria-labelledby="dLabel8">
+                                                                        <a class="dropdown-item" href="#">重新上架</a>
+                                                                        <a class="dropdown-item" href="#">删除</a>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <!--end tr-->
+                                                        <tr>
+                                                            <td>
+                                                                <div class="media">
+                                                                    <img src="static/picture/02.png" height="30"
+                                                                        class="me-3 align-self-center rounded"
+                                                                        alt="...">
+                                                                    <div class="media-body align-self-center">
+                                                                        <h6 class="m-0">运动鞋</h6>
+                                                                        <a href="#" class="font-12 text-primary">ID:
+                                                                            A5002</a>
+                                                                    </div>
+                                                                    <!--end media body-->
+                                                                </div>
+                                                            </td>
+                                                            <td>$99 <del class="text-muted font-10">$150</del></td>
+
+                                                            <td>
+                                                                <div class="dropdown d-inline-block float-right">
+                                                                    <a class="nav-link dropdown-toggle arrow-none"
+                                                                        id="dLabel8" data-bs-toggle="dropdown" href="#"
+                                                                        role="button" aria-haspopup="false"
+                                                                        aria-expanded="false">
+                                                                        <i
+                                                                            class="fas fa-ellipsis-v font-20 text-muted"></i>
+                                                                    </a>
+                                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                                        aria-labelledby="dLabel8">
+                                                                        <a class="dropdown-item" href="#">重新上架</a>
+                                                                        <a class="dropdown-item" href="#">删除</a>
+
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                    </tbody>
+                                                </table>
+                                                <!--end table-->
+                                            </div>
+                                            <!--end /div-->
+                                        </div>
+                                        <!--end card-body-->
+                                    </div>
+                                    <!--end card-->
                                 </div>
+                                <!--end col-->
+
+
                             </div>
+
                         </div>
                     </div>
+                    <!--end card-body-->
+                </div>
+                <!--end card-->
             </div>
+            <!--end col-->
         </div>
-       <div class="jd_win">
-           <div class="jd_win_box">
-               <div class="jd_win_tit">你确定删除该商品吗？</div>
-               <div class="jd_btn clearfix">
-                   <a href="#" class="cancle f_left">取消</a>
-                   <a href="#" class="submit f_right">确定</a>
-               </div>
-       
-           </div>
-       </div>
-        <!-- <div class="cart-product-area">
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product1.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Leather Bag</a></h3>
-                    <span class="category">Bag</span>
-                    <div class="price">
-                        <span class="main-price">$460</span>
-                        <span class="discounted-price">$320</span>
-                    </div>
-                </div>
-        
-            </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product2.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Lipstick</a></h3>
-                    <span class="category">Cosmetics</span>
-                    <div class="price">
-                        <span class="main-price">$4</span>
-                        <span class="discounted-price">$3</span>
-                    </div>
-                </div>
+        <!--end row-->
 
-            </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product3.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Sports shoe</a></h3>
-                    <span class="category">Show</span>
-                    <div class="price">
-                        <span class="main-price">$60</span>
-                        <span class="discounted-price">$20</span>
-                    </div>
-                </div>
 
-            </div>
-            
-        </div> -->
- 
         <!--====================  footer area ====================-->
         <footer>
-            <div class="footer-nav-wrapper">
-                <a href="index.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/home.svg" class="injectable" alt="">
-                        <span>首页</span>
-                    </div>
-                </a>
-                <a href="chat.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/chat.svg" class="injectable" alt="">
-                        <span>需求</span>
-                    </div>
-                </a>
-                <a href="cart.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/cart.svg" class="injectable" alt="">
-                        <span>订单</span>
-                    </div>
-                </a>
-                <a href="profile.html" class="footer-nav-single">
-                    <div class="menu-wrapper">
-                        <img src="assets/img/icons/profile.svg" class="injectable" alt="">
-                        <span>个人中心</span>
-                    </div>
-                </a>
+            <div class="sc-bottom-bar">
+                <a class="sc-menu-item " href="index.html"><i class="fas fa-home"></i></a>
+                <a class="sc-menu-item " href="goods-category.html"><i class="fas  fa-list"></i></a>
+                <a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
+                <a class="sc-menu-item sc-current" href="cart.html"><i class="fas fa-clipboard"></i></a>
+                <a class="sc-nav-indicator"></a>
+                <a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
             </div>
         </footer>
         <!--====================  End of footer area  ====================-->
     </div>
-    <!-- JS
-    ============================================ -->
-    <!-- Modernizer JS -->
-    <script src='js/jquery.js'></script>
-<script src="js/cartjs.js"></script>
-    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+
+    <!-- App js -->
+    <script src="static/js/app.js"></script>
+    <script src="js/tabbar.js"></script>
     <!-- jQuery JS -->
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- IonRanger JS -->
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-    <!-- SVG inject JS -->
-    <script src="assets/js/plugins/svg-inject.min.js"></script>
-    <!-- Slick slider JS -->
-    <script src="assets/js/plugins/slick.min.js"></script>
-    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
-    <!--
-  <script src="assets/js/plugins/plugins.min.js"></script>
--->
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <script src="js/popbox.js"></script>
+    <script>
+        function okFunction() {
+            window.location.href = "login.html";
+        }
+        function cancelFunction() {
+            alert('Cancel!');
+        }
+    </script>
 </body>
+
 </html>
