@@ -7,22 +7,29 @@ import (
 func Start(addr, webDir string) (err error) {
 	// 使用gin框架提供的默认web服务引擎
 	r := gin.Default()
-
+	r.LoadHTMLGlob("Static/*.html")
 	// 静态文件服务
 	if len(webDir) > 0 {
 		// 将一个目录下的静态文件，并注册到web服务器
-		r.Static("/", webDir)
+		r.Static("/share", webDir)
 	}
 
 	// api接口服务，定义了路由组 /Sharing
-	todo := r.Group("/Sharing")
+	todo := r.Group("")
 	{
 		// 定义增改查的接口，并注册到web服务器
 
 		todo.POST("/addSticker",addSticker)
 		todo.POST("/isStickExist",isStickExist)
-		todo.POST("/upload",upload)
+		todo.POST("/register",register)
+		todo.POST("/login",login)
+		todo.POST("/logout",logout)
+		todo.POST("/sendEmail",sendEmail)
 
+	}
+	share := r.Group("")
+	{
+		share.GET("/profile",UserProfile)
 	}
 	// 启动web服务
 	err = r.Run(addr)
