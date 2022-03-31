@@ -1,23 +1,57 @@
 [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			}
+		],
+		"name": "CommunitySchedule",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			},
+			{
 				"internalType": "address",
-				"name": "addr",
+				"name": "beneficiaryAddr",
 				"type": "address"
 			},
 			{
 				"internalType": "string",
-				"name": "species",
+				"name": "communityName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "communityIntroduce",
 				"type": "string"
 			},
 			{
 				"internalType": "uint256",
-				"name": "id",
+				"name": "communityAmounts",
 				"type": "uint256"
 			}
 		],
-		"name": "BuyInsurance",
+		"name": "addCommunity",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -37,11 +71,6 @@
 			{
 				"internalType": "string",
 				"name": "species",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "img",
 				"type": "string"
 			},
 			{
@@ -115,6 +144,19 @@
 	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			}
+		],
+		"name": "delCommunity",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "address",
 				"name": "owner",
 				"type": "address"
@@ -167,6 +209,72 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "donator",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "donatorName",
+				"type": "string"
+			}
+		],
+		"name": "donate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "donatorData",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "donatorsAddr",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
 				"name": "id",
 				"type": "uint256"
 			}
@@ -189,11 +297,6 @@
 				"type": "string"
 			},
 			{
-				"internalType": "string",
-				"name": "img",
-				"type": "string"
-			},
-			{
 				"internalType": "uint256",
 				"name": "rent",
 				"type": "uint256"
@@ -207,6 +310,70 @@
 				"internalType": "uint256",
 				"name": "theNew",
 				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getGoodsId",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getUser",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "goodsId",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
+			}
+		],
+		"name": "isCommunityExist",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -280,6 +447,51 @@
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "people",
+				"type": "address"
+			}
+		],
+		"name": "login",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "loginUser",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "people",
+				"type": "address"
+			}
+		],
+		"name": "logout",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "queryBalance",
 		"outputs": [
@@ -319,25 +531,24 @@
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
 				"internalType": "address",
-				"name": "addr",
+				"name": "people",
 				"type": "address"
 			},
 			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
+				"internalType": "string",
+				"name": "password",
+				"type": "string"
 			}
 		],
-		"name": "searchInsurance",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "a",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
+		"name": "register",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -355,11 +566,6 @@
 			{
 				"internalType": "string",
 				"name": "species",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "img",
 				"type": "string"
 			},
 			{

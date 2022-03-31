@@ -56,11 +56,12 @@ import (
 //	client.Close()
 //}
 func Upload(c *gin.Context){
-	_,f, err := c.Request.FormFile("file")
+	f, err := c.FormFile("imgname")
+	//file, handler, err := c.FormFile("imgname")
+	fmt.Println(err)
 	if err != nil {
 		log.Printf("Error when try to get file: %v", err)
 	} else {
-
 		fileExt:=strings.ToLower(path.Ext(f.Filename))
 		if fileExt!=".png"&&fileExt!=".jpg"&&fileExt!=".gif"&&fileExt!=".jpeg"{
 			c.JSON(200, gin.H{
@@ -74,6 +75,7 @@ func Upload(c *gin.Context){
 
 		filepath:=fmt.Sprintf("%s%s",fildDir,fileName)
 		c.SaveUploadedFile(f, filepath)
+		fmt.Println("filename",fileName)
 		c.JSON(200, gin.H{
 			"code": 200,
 			"msg":  "上传成功!",
