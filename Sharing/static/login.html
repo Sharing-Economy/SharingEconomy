@@ -132,18 +132,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
-                    <form class="signin-form" action="">
+                    <form class="signin-form"  action="/login" method="POST" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label>账户</label>
-                            <input class="form-control" type="file" id="formFileMultiple" style="font-size: 17px;
+                            <input class="form-control" type="file" id="formFileMultiple" name="log_addr" style="font-size: 17px;
                                                             padding-top: 12px;">
 
                         </div>
 
                         <div class="form-group">
                             <label>密码</label>
-                            <input type="password" class="form-control" placeholder="输入你的密码" id="use_password">
+                            <input type="password" class="form-control" placeholder="输入你的密码" id="use_password" name="log_passwd">
                             <p id="p_password"></p>
                         </div>
 

@@ -30,6 +30,7 @@ func Start(addr, webDir string) (err error) {
 	share := r.Group("")
 	{
 		share.GET("/profile",UserProfile)
+		share.GET("/index",Navigate)
 	}
 	// 启动web服务
 	err = r.Run(addr)
