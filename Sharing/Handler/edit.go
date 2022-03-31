@@ -223,3 +223,20 @@ func addGoods(c *gin.Context)  {
 	data,err := config.AddGoodsMethod(client,contract,owner,name,species,big.NewInt(rentInt64),big.NewInt(ethPledgeInt64),goodsImgs)
 	respOK(c,data)
 }
+
+//修改用户信息
+func updateUser(c *gin.Context)  {
+	//初始化client
+	client,err := config.GetClient()
+	if err != nil{
+		respError(c,err)
+		fmt.Println(err)
+		return
+	}
+	//初始化合约地址
+	contract ,err:= config.GetAddress(client)
+	if err != nil{
+		respError(c,err)
+		return
+	}
+}
