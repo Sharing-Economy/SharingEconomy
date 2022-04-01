@@ -20,8 +20,8 @@
 
 	<!-- App css搜索框 -->
 	<link href="share/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
-	<link href="static/css/app.min.css" rel="stylesheet" type="text/css">
+	<link href="share/static/css/icons.min.css" rel="stylesheet" type="text/css">
+	<link href="share/static/css/app.min.css" rel="stylesheet" type="text/css">
 	<style>
 		.m-button {
 			padding: 0 0.24rem;
@@ -167,33 +167,7 @@
 	</header>
 	<!--====================  End of header area  ====================-->
 	<!--====================  mobile menu overlay ====================-->
-	<div class="offcanvas-menu" id="offcanvas-menu">
-		<div class="profile-card text-center">
-			<div class="profile-card__image space-mb--10">
-				<img src="share/assets/img/profile.jpg" class="img-fluid" alt="" style="display: unset;">
-			</div>
-			<div class="profile-card__content">
-				<p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
-			</div>
-		</div>
-		<div class="offcanvas-navigation-wrapper space-mt--40">
-            <ul class="offcanvas-navigation">
-                <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-                        href="../login">登录/注册</a></li>
-                <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
-                        href="../profile">我的主页</a></li>
-                <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
-                        href="../lend-items">上传物品</a></li>
-                <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
-                        href="../shop">我租入的物品</a></li>
-                <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
-                        href="../order">我借出的物品</a></li>
-                <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-                        onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
-                </li>
-            </ul>
-        </div>
-	</div>
+	{{ template "Static/menu.html" . }}
 
 
 
@@ -326,15 +300,15 @@
 		</div>
 
 	</div>
-	<footer class="aui-footer-button aui-footer-flex aui-footer-fixed">
+	<footer class="aui-footer-button aui-footer-flex aui-footer-fixed" style="width: 100%; position: fixed;">
 		<div class="aui-footer-wrap">
-			<a href="../index">
-			<i class="fas fa-home"></i>
-			<span>首页</span></a>
+			<a href="index.html">
+				<i class="fas fa-home"></i>
+				<span>首页</span></a>
 		</div>
 
 		<div class="aui-footer-wrap">
-			<a href="../shop.">
+			<a href="shop.html">
 				<i class="fas fas fa-shopping-cart"></i>
 				<span>租入车</span></a>
 		</div>
@@ -443,5 +417,5 @@
 
 
 </body>
-
+{{ end }}
 </html>

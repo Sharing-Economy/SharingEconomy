@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>搜索应用</title>
+    <title>搜索好物</title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -54,9 +54,9 @@
                         <div class="col-auto">
 
                             <input type="search" name="search" class="form-control  " placeholder="Type text..." style="position: relative;
-                            top: 20px;">
+                            top: 20px; padding-right: 10px;padding-left: 10px;">
                            <a href="../category-details"><button type="button" class="btn btn-de-primary shadow-none" style="position: relative;
-                            left: 195px;
+                            left: 177px;
                             top: -16px;"><i class="la la-search"></i></button></a>
                         </div>
 
@@ -75,33 +75,7 @@
 
         </header>
     </div>
-    <div class="offcanvas-menu" id="offcanvas-menu">
-        <div class="profile-card text-center">
-            <div class="profile-card__image space-mb--10">
-                <img src="share/assets/img/profile.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="profile-card__content">
-                <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
-            </div>
-        </div>
-        <div class="offcanvas-navigation-wrapper space-mt--40">
-            <ul class="offcanvas-navigation">
-                <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-                        href="../login">登录/注册</a></li>
-                <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
-                        href="../profile">我的主页</a></li>
-                <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
-                        href="../lend-items">上传物品</a></li>
-                <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
-                        href="../shop">我租入的物品</a></li>
-                <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
-                        href="../order">我借出的物品</a></li>
-                <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-                        onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    {{ template "Static/menu.html" . }}
 
 
     <section class="aui-scrollView">
@@ -162,5 +136,5 @@
         }
     </script>
 </body>
-
+{{ end }}
 </html>

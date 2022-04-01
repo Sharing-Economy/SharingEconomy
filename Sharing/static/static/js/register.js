@@ -99,7 +99,7 @@ $("#register").click(function(){
 	}else{
         $.ajax({
 			type:"POST",
-			url:"/",
+			url:"/registerPost",
 			data:{"use_name":$("#use_name").val(),"use_email":$("#use_email").val(),"use_password":$("#use_password").val()},
 			success:function(data){
 				alert("用户注册成功!");
