@@ -1,3 +1,4 @@
+{{ define "Static/search-page.html" }}
 <!DOCTYPE html>
 <html>
 
@@ -8,28 +9,27 @@
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta content="telephone=no" name="format-detection" />
-    <script src="static/js/public.js"></script>
-    <link href="css/style5.css" rel="stylesheet" type="text/css" />
+    <script src="share/static/js/public.js"></script>
+    <link href="share/css/style5.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="quantumalert.css">
     <!-- Theme css -->
-    <link rel="stylesheet" id="change-link" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" id="change-link" type="text/css" href="share/css/style1.css">
     <!-- 图标 -->
-    <link rel="stylesheet" href="static/css/flaticon.css">
-    <link rel="stylesheet" href="static/css/responsive.css">
+    <link rel="stylesheet" href="share/static/css/flaticon.css">
+    <link rel="stylesheet" href="share/static/css/responsive.css">
     <!-- 底部导航 -->
-   <link rel="stylesheet" href="css/tabbar.css">
+   <link rel="stylesheet" href="share/css/tabbar.css">
 
     <!-- Slick CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="share/assets/css/plugins/slick.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="share/assets/css/style.css">
 
     <!-- App css搜索框 -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="static/css/app.min.css" rel="stylesheet" type="text/css">
-    <script src="static/js/public.js"></script>
+    <link href="share/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="share/static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="share/static/css/app.min.css" rel="stylesheet" type="text/css">
+    <script src="share/static/js/public.js"></script>
 </head>
 
 <body>
@@ -46,8 +46,8 @@
                         <div class="col-auto">
 
                             <div class="header-logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
+                                <a href="../index">
+                                   <img src="share/assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
                                 </a>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
 
                             <input type="search" name="search" class="form-control  " placeholder="Type text..." style="position: relative;
                             top: 20px;">
-                           <a href="category-details.html"><button type="button" class="btn btn-de-primary shadow-none" style="position: relative;
+                           <a href="../category-details"><button type="button" class="btn btn-de-primary shadow-none" style="position: relative;
                             left: 195px;
                             top: -16px;"><i class="la la-search"></i></button></a>
                         </div>
@@ -78,7 +78,7 @@
     <div class="offcanvas-menu" id="offcanvas-menu">
         <div class="profile-card text-center">
             <div class="profile-card__image space-mb--10">
-                <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+                <img src="share/assets/img/profile.jpg" class="img-fluid" alt="">
             </div>
             <div class="profile-card__content">
                 <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
@@ -87,15 +87,15 @@
         <div class="offcanvas-navigation-wrapper space-mt--40">
             <ul class="offcanvas-navigation">
                 <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-                        href="login.html">登录/注册</a></li>
+                        href="../login">登录/注册</a></li>
                 <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
-                        href="profile.html">我的主页</a></li>
+                        href="../profile">我的主页</a></li>
                 <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
-                        href="lend-items.html">上传物品</a></li>
+                        href="../lend-items">上传物品</a></li>
                 <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
-                        href="shop.html">我租入的物品</a></li>
+                        href="../shop">我租入的物品</a></li>
                 <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
-                        href="order.html">我借出的物品</a></li>
+                        href="../order">我借出的物品</a></li>
                 <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
                         onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
                 </li>
@@ -124,35 +124,35 @@
     <footer>
 
         <div class="sc-bottom-bar">
-            <a class="sc-menu-item " href="index.html"><i class="fas fa-home"></i></a>
-            <a class="sc-menu-item " href="goods-category.html"><i class="fas  fa-list"></i></a>
-            <a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
+            <a class="sc-menu-item " href="../index"><i class="fas fa-home"></i></a>
+            <a class="sc-menu-item " href="../goods-category"><i class="fas  fa-list"></i></a>
+            <a href="../chat" class="sc-menu-item "><i class="fas fa-plus"></i></a>
 
-             <a class="sc-menu-item" href="cart.html"><i class="fas fa-clipboard"></i></a>
-            <a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
+             <a class="sc-menu-item" href="../cart"><i class="fas fa-clipboard"></i></a>
+            <a class="sc-menu-item" href="../ui-me"><i class="fas fa-user"></i></a>
         </div>
 
     </footer>
 
 
 
-    <script type="text/javascript" src="themes/js/jquery.min.js"></script>
-    <script src="js/tabbar.js"></script>
+    <script type="text/javascript" src="share/themes/js/jquery.min.js"></script>
+    <script src="share/js/tabbar.js"></script>
     <!-- Modernizer JS -->
-    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <script src="share/assets/js/modernizr-2.8.3.min.js"></script>
     <!-- jQuery JS -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="share/assets/js/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="share/assets/js/bootstrap.min.js"></script>
     <!-- IonRanger JS -->
-    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+    <script src="share/assets/js/plugins/ion.rangeSlider.min.js"></script>
     <!-- SVG inject JS -->
-    <script src="assets/js/plugins/svg-inject.min.js"></script>
+    <script src="share/assets/js/plugins/svg-inject.min.js"></script>
     <!-- Slick slider JS -->
-    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="share/assets/js/plugins/slick.min.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="js/popbox.js"></script>
+    <script src="share/assets/js/main.js"></script>
+    <script src="share/js/popbox.js"></script>
     <script>
         function okFunction() {
             window.location.href = "login.html";

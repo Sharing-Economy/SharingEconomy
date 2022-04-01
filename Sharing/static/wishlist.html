@@ -1,3 +1,4 @@
+{{ define "Static/wishlist.html" }}
 <!DOCTYPE html>
 <html>
 
@@ -8,16 +9,16 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="static/js/public.js"></script>
+    <script src="share/static/js/public.js"></script>
     <!-- 底部导航栏 -->
-    <link rel="stylesheet" href="css/tabbar.css">
+    <link rel="stylesheet" href="share/css/tabbar.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="share/assets/css/style.css">
 
     <!-- App css -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="static/css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="share/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="share/static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="share/static/css/app.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <header>
@@ -27,15 +28,15 @@
                 <div class="col-auto">
                     <!-- header logo -->
                     <div class="header-logo">
-                        <a href="index.html">
-                            <img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
+                        <a href="../index">
+                           <img src="share/assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
                         </a>
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center">
                     <!-- 搜索框 -->
                     <div class="header-search">
-                        <a href="search-page.html">
+                        <a href="../search-page">
                             <div class="input-group">
                                 <input type="text" id="chat-search" name="chat-search" class="form-control"
                                     placeholder="搜索好物" style="    padding-left: 30px;">
@@ -60,7 +61,7 @@
     <div class="offcanvas-menu" id="offcanvas-menu">
         <div class="profile-card text-center">
             <div class="profile-card__image space-mb--10">
-                <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+                <img src="share/assets/img/profile.jpg" class="img-fluid" alt="">
             </div>
             <div class="profile-card__content">
                 <p class="name">0x5B38Da6a701c568545dCfcB03F <span class="id">John</span></p>
@@ -69,15 +70,15 @@
         <div class="offcanvas-navigation-wrapper space-mt--40">
             <ul class="offcanvas-navigation">
                 <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-                        href="login.html">登录/注册</a></li>
+                        href="../login">登录/注册</a></li>
                 <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
-                        href="profile.html">我的主页</a></li>
+                        href="../profile">我的主页</a></li>
                 <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
-                        href="lend-items.html">上传物品</a></li>
+                        href="../lend-items">上传物品</a></li>
                 <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
-                        href="shop.html">我租入的物品</a></li>
+                        href="../shop">我租入的物品</a></li>
                 <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
-                        href="order.html">我借出的物品</a></li>
+                        href="../order">我借出的物品</a></li>
                 <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
                         onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
                 </li>
@@ -196,7 +197,7 @@
 
 
                                 <li class="list-inline-item">
-                                    <a href="public-benefit.html"><button type="button"
+                                    <a href="../public-benefit"><button type="button"
                                             class="btn btn-primary btn-sm">更多公益</button></a>
                                 </li>
                             </ul>
@@ -208,7 +209,7 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <a href="public-details.html">
+                        <a href="../public-details">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="task-box">
@@ -231,15 +232,15 @@
                                         <div class="d-flex justify-content-between">
                                             <div class="img-group">
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-2.jpg" alt="user"
+                                                    <img src="share/static/picture/user-2.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-5.jpg" alt="user"
+                                                    <img src="share/static/picture/user-5.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-7.jpg" alt="user"
+                                                    <img src="share/static/picture/user-7.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                             </div>
@@ -261,7 +262,7 @@
                             </div>
                         </a>
                         <!--end card-->
-                        <a href="public-details.html">
+                        <a href="../public-details">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="task-box">
@@ -283,15 +284,15 @@
                                         <div class="d-flex justify-content-between">
                                             <div class="img-group">
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-2.jpg" alt="user"
+                                                    <img src="share/static/picture/user-2.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-4.jpg" alt="user"
+                                                    <img src="share/static/picture/user-4.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-6.jpg" alt="user"
+                                                    <img src="share/static/picture/user-6.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                             </div>
@@ -316,7 +317,7 @@
                     </div>
                     <!--end col-->
                     <div class="col-lg-6">
-                        <a href="public-details.html">
+                        <a href="../public-details">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="task-box">
@@ -340,15 +341,15 @@
                                         <div class="d-flex justify-content-between">
                                             <div class="img-group">
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-8.jpg" alt="user"
+                                                    <img src="share/static/picture/user-8.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-5.jpg" alt="user"
+                                                    <img src="share/static/picture/user-5.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                                 <a class="user-avatar user-avatar-group" href="#">
-                                                    <img src="static/picture/user-7.jpg" alt="user"
+                                                    <img src="share/static/picture/user-7.jpg" alt="user"
                                                         class="rounded-circle thumb-xs">
                                                 </a>
                                             </div>
@@ -370,7 +371,7 @@
                             </div>
                         </a>
                         <!--end card-->
-                        <a href="public-details.html">
+                        <a href="../public-details">
                         <div class="card">
                             <div class="card-body">
                                 <div class="task-box">
@@ -393,15 +394,15 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="img-group">
                                             <a class="user-avatar user-avatar-group" href="#">
-                                                <img src="static/picture/user-10.jpg" alt="user"
+                                                <img src="share/static/picture/user-10.jpg" alt="user"
                                                     class="rounded-circle thumb-xs">
                                             </a>
                                             <a class="user-avatar user-avatar-group" href="#">
-                                                <img src="static/picture/user-8.jpg" alt="user"
+                                                <img src="share/static/picture/user-8.jpg" alt="user"
                                                     class="rounded-circle thumb-xs">
                                             </a>
                                             <a class="user-avatar user-avatar-group" href="#">
-                                                <img src="static/picture/user-6.jpg" alt="user"
+                                                <img src="share/static/picture/user-6.jpg" alt="user"
                                                     class="rounded-circle thumb-xs">
                                             </a>
                                         </div>
@@ -435,24 +436,24 @@
     <footer>
 
         <div class="sc-bottom-bar">
-            <a class="sc-menu-item " href="index.html"><i class="fas fa-home"></i></a>
-            <a class="sc-menu-item " href="goods-category.html"><i class="fas  fa-list"></i></a>
-            <a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
-            <a class="sc-menu-item" href="cart.html"><i class="fas fa-clipboard"></i></a>
-            <a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
+            <a class="sc-menu-item " href="../index"><i class="fas fa-home"></i></a>
+            <a class="sc-menu-item " href="../goods-category"><i class="fas  fa-list"></i></a>
+            <a href="../chat" class="sc-menu-item "><i class="fas fa-plus"></i></a>
+            <a class="sc-menu-item" href="../cart"><i class="fas fa-clipboard"></i></a>
+            <a class="sc-menu-item" href="../ui-me"><i class="fas fa-user"></i></a>
         </div>
 
     </footer>
 
     <!-- Javascript  -->
     <!-- App js -->
-    <script src="static/js/app.js"></script>
+    <script src="share/static/js/app.js"></script>
     <!-- jQuery JS -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="share/assets/js/jquery-3.4.1.min.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="share/assets/js/main.js"></script>
 
-    <script src="js/popbox.js"></script>
+    <script src="share/js/popbox.js"></script>
     <script>
         function okFunction() {
             window.location.href = "login.html";
