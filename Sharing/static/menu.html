@@ -21,12 +21,15 @@
                         href="share/order.html">我借出的物品</a></li>
             <li><span class="icon"><i class="ti ti-heart" style="font-size: 25px;"></i></span><a
                         href="wishlist.html">我的公益</a></li>
+            <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
+                        href="share/login.html">退出登入</a></li>
             {{if eq "" .userName}}
                 <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-                            href="share/login.html">登录/注册</a></li>
+                            href="../login.html">登录/注册</a></li>
             {{else}}
                 <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-                            href="share/login.html">退出登录</a></li>
+                            onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+                </li>
             {{end}}
         </ul>
     </div>

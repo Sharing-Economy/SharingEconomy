@@ -8,24 +8,12 @@
 	<meta name="format-detection" content="telephone=no, email=no" />
 	<meta charset="UTF-8">
 	<title>Share Fish-商品详情</title>
+	<script src="static/js/public.js"></script>
 	<link rel="stylesheet" href="themes/css/core.css">
-	<link rel="stylesheet" href="themes/css/icon.css">
 	<link rel="stylesheet" href="themes/css/home.css">
 
-
-	<!-- Favicon -->
-	<link rel="icon" href="assets/img/favicon.ico">
-	<!-- CSS-->
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<!-- FontAwesome CSS -->
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<!-- Slick CSS -->
-	<link rel="stylesheet" href="assets/css/plugins/slick.min.css">
-	<!-- Animate CSS -->
-	<link rel="stylesheet" href="assets/css/plugins/cssanimation.min.css">
-	<!-- IonRange slider CSS -->
-	<link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
 	<!-- Main Style CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -33,7 +21,6 @@
 	<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
 	<link href="static/css/app.min.css" rel="stylesheet" type="text/css">
-	<script src="static/js/public.js"></script>
 	<style>
 		.m-button {
 			padding: 0 0.24rem;
@@ -161,7 +148,7 @@
 					<div class="col d-flex justify-content-center">
 						<div class="header-search">
 							<div class="input-group">
-								<h4>商品详情</h4>
+								<h4 style="    padding-top: 18px;">商品详情</h4>
 							</div>
 						</div>
 					</div>
@@ -189,23 +176,22 @@
 			</div>
 		</div>
 		<div class="offcanvas-navigation-wrapper space-mt--40">
-			<ul class="offcanvas-navigation">
-				<li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
-						href="login.html">登录/注册</a></li>
-				<li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
-						href="profile.html">我的主页</a></li>
-				<li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
-						href="lend-items.html">上传物品</a></li>
-				<li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
-						href="shop.html">我租入的物品</a></li>
-				<li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
-						href="order.html">我借出的物品</a></li>
-				<li><span class="icon"><i class="ti ti-heart" style="font-size: 25px;"></i></span><a
-						href="wishlist.html">我的公益</a></li>
-				<li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-						href="login.html">退出登录</a></li>
-			</ul>
-		</div>
+            <ul class="offcanvas-navigation">
+                <li><span class="icon"><i class="ti ti-login" style="font-size: 25px;"></i></span><a
+                        href="login.html">登录/注册</a></li>
+                <li><span class="icon"><i class="ti ti-id" style="font-size: 25px;"></i></span><a
+                        href="profile.html">我的主页</a></li>
+                <li><span class="icon"><i class="ti ti-plus" style="font-size: 25px;"></i></span><a
+                        href="lend-items.html">上传物品</a></li>
+                <li><span class="icon"><i class="ti ti-shopping-cart" style="font-size: 25px;"></i></span><a
+                        href="shop.html">我租入的物品</a></li>
+                <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
+                        href="order.html">我借出的物品</a></li>
+                <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
+                        onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+                </li>
+            </ul>
+        </div>
 	</div>
 
 
@@ -247,12 +233,15 @@
 	<div class="aui-product-content">
 		<div class="aui-real-price clearfix">
 			<span>
+				租金
 				<i>￥</i>26/天
 			</span>
-			<del><span class="aui-font-num">￥30</span></del>
-			<div class="aui-settle-choice">
-				<span>促销价</span>
-			</div>
+		
+			
+		</div>
+		<div class="price" style="padding-left: 15px;">
+			<span class="main-price">押金</span>
+			<span class="discounted-price">￥12</span>
 		</div>
 		<div class="aui-product-title">
 			<h2>
@@ -270,7 +259,7 @@
 		</div>
 
 		<div class="aui-product-coupon">
-			<a href="ui-product.html#" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear"
+			<a href="" class="aui-address-cell aui-fl-arrow aui-fl-arrow-clear"
 				data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
 				<div class="aui-address-cell-bd">选择</div>
 				<div class="aui-address-cell-ft">分类</div>
@@ -304,9 +293,9 @@
 							</div>
 							<div class="aui-car-box-list-text-price">
 								<div class="aui-car-box-list-text-arithmetic" style="position:inherit">
-									<a  class="minus" id="reduce" onclick="reducecount()">-</a>
-									<input class="num" type="text" id="text" value="1"/>
-									<a  class="plus"  id="plus" onclick="pluscount()">+</a>
+									<a class="minus" id="reduce" onclick="reducecount()">-</a>
+									<input class="num" type="text" id="text" value="0" />
+									<a class="plus" id="plus" onclick="pluscount()">+</a>
 								</div>
 							</div>
 						</div>
@@ -314,10 +303,10 @@
 					</div>
 
 					<a href="javascript:;" class="actionsheet-action" id="cancel"></a>
-					<div class="aui-product-function">
-						<a href="cart.html" class="yellow-color">加入订单</a>
-						<a style="color: white;" class="red-color" onclick="Qual.successd('Success','租用成功');">立即租用</a>
-					</div>
+					<a onclick="Qual.successd('Success','租用成功');">
+						<div class="aui-btn aui-btn-gray" style="width: 400px;">确定</div>
+					</a>
+
 
 				</div>
 			</div>
@@ -336,52 +325,40 @@
 		</div>
 
 	</div>
+	<footer class="aui-footer-button aui-footer-flex aui-footer-fixed">
+		<div class="aui-footer-wrap">
+			<a href="index.html">
+			<i class="fas fa-home"></i>
+			<span>首页</span></a>
+		</div>
 
-	<footer class="aui-footer-product">
-		<div class="aui-footer-product-fixed">
-			<!-- <div class="aui-footer-product-concern-cart">
-				<a href="ui-product.html#">
-					<span class="aui-f-p-icon"><img src="themes/img/icon/icon-kf.png" alt=""></span>
-					<span class="aui-f-p-focus-info">客服</span>
-				</a>
-				<a href="ui-product.html#">
-					<span class="aui-f-p-icon"><img src="themes/img/icon/icon-sc.png" alt=""></span>
-					<span class="aui-f-p-focus-info">收藏</span>
-				</a>
-				<a href="ui-product.html#">
-					<span class="aui-f-p-icon"><img src="themes/img/icon/icon-dp.png" alt=""></span>
-					<span class="aui-f-p-focus-info">店铺</span>
-				</a>
-			</div> -->
-			<!-- <div class="aui-footer-product-action-list">
-				<a href="cart.html" class="yellow-color">加入订单</a>
-				<a href="shop.html" class="red-color">立即租用</a>
-			</div> -->
-			<div class="aui-product-function">
-				<a href="cart.html" class="yellow-color">加入订单</a>
-				<a style="color: white;" class="red-color" onclick="Qual.successd('Success','租用成功');">立即租用</a>
+		<div class="aui-footer-wrap">
+			<a href="shop.html">
+				<i class="fas fas fa-shopping-cart"></i>
+				<span>租入车</span></a>
+		</div>
+		<div class="aui-footer-group aui-footer-flex1">
+			<div class="aui-footer-flex">
+
+				<div class="aui-btn aui-btn-red">
+					<a href="" style="color: inherit;"
+						data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
+						<span>立即抢租</span> </a>
+				</div>
 			</div>
 		</div>
 	</footer>
 
-
-	<script src="js/script2.js"></script>
-	<script src="assets/js/modernizr-2.8.3.min.js"></script>
+	<script src="js/tabbar.js"></script>
 	<!-- jQuery JS -->
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<!-- Bootstrap JS -->
 	<script src="assets/js/bootstrap.min.js"></script>
-	<!-- IonRanger JS -->
-	<script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-	<!-- SVG inject JS -->
-	<script src="assets/js/plugins/svg-inject.min.js"></script>
-	<!-- Slick slider JS -->
-	<script src="assets/js/plugins/slick.min.js"></script>
 	<!-- Main JS -->
 	<script src="assets/js/main.js"></script>
 	<!-- script js -->
 	<script src="js/script1.js"></script>
-	<script src="js/quantumalert.js"></script>
+	<script src="js/popbox.js"></script>
 	<script>
 		function okFunction() {
 			alert('OK!');
@@ -391,11 +368,8 @@
 		}
 	</script>
 
-
-	<script src="themes/js/jquery.min.js"></script>
 	<script src="themes/js/aui.js"></script>
-	<script src="themes/js/aui-down.js"></script>
-	<script type="text/javascript" src="themes/js/city.js"></script>
+
 
 	<script type="text/javascript">
 		$(function () {
@@ -429,26 +403,26 @@
 	<script>
 
 
-		 //增加函数
-		 function pluscount() {
-            //得到input输入框
-            var i = document.getElementById("text");
-            //将value的字符型转为数字类型
-            var value = parseInt(i.getAttribute("value"));
-            //规定value上限200，setAttribute后加属性名和属性值
-            if (value <=200){
-                i.setAttribute("value",++value);
-            }
-        }
-        //减少函数
-        function reducecount() {
-            var i = document.getElementById("text");
-            var value = parseInt(i.getAttribute("value"));
-            //在value的值大于0的情况下，value的值跟随增加按钮增加
-            if (value>0){
-                i.setAttribute("value", --value);
-            }
-        }
+		//增加函数
+		function pluscount() {
+			//得到input输入框
+			var i = document.getElementById("text");
+			//将value的字符型转为数字类型
+			var value = parseInt(i.getAttribute("value"));
+			//规定value上限200，setAttribute后加属性名和属性值
+			if (value <= 200) {
+				i.setAttribute("value", ++value);
+			}
+		}
+		//减少函数
+		function reducecount() {
+			var i = document.getElementById("text");
+			var value = parseInt(i.getAttribute("value"));
+			//在value的值大于0的情况下，value的值跟随增加按钮增加
+			if (value > 0) {
+				i.setAttribute("value", --value);
+			}
+		}
 		/**
 		 * Javascript API调用ActionSheet
 		 */

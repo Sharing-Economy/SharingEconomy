@@ -99,13 +99,10 @@ $("#register").click(function(){
 	}else{
         $.ajax({
 			type:"POST",
-			url:"/register",
-			dataType:"json",
+			url:"/",
 			data:{"use_name":$("#use_name").val(),"use_email":$("#use_email").val(),"use_password":$("#use_password").val()},
 			success:function(data){
-				console.log(data.data);
 				alert("用户注册成功!");
-				window.location="./share/login.html";
 		  }
 		})
 	}
@@ -116,11 +113,10 @@ $("#register").click(function(){
     $("#deliver").click(function(){
 	  $.ajax({
 		  type:"POST",
-		  url:"/sendEmail",
+		  url:"/",
 		  data:{"use_email":$("#use_email").val()},
 		  success:function(data){
-		  	console.log(data.data)
-				number=data.data;
+				number=data.random;
                   alert("发送成功！");
 		}
 	})

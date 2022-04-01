@@ -18,12 +18,8 @@
 	<link rel="stylesheet" href="static/css/flaticon.css">
 	<link rel="stylesheet" href="static/css/responsive.css">
 	<!-- 底部导航 -->
-	<link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/tabbar.css">
 
-	<!-- Slick CSS -->
-	<link rel="stylesheet" href="assets/css/plugins/slick.min.css">	
-	<!-- IonRange slider CSS -->
-	<link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
 	<!-- Main Style CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -31,8 +27,17 @@
 	<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
 	<link href="static/css/app.min.css" rel="stylesheet" type="text/css">
-	<script src="static/js/public.js"></script>
 </head>
+<style>
+	span {
+		color: #4b4b4b;
+		font-size: 14px;
+		font-weight: normal;
+		padding-bottom: 15px;
+		padding-top: 10px;
+		line-height: 35px;
+	}
+</style>
 
 <body>
 
@@ -51,26 +56,25 @@
 					<div class="col d-flex justify-content-center">
 						<!-- 搜索框 -->
 						<div class="header-search">
-							<div class="input-group">
-								<input type="text" id="chat-search" name="chat-search" class="form-control"
-									placeholder="搜索好物">
-									<a href="category-details.html"><button type="button"
-										class="btn btn-de-primary shadow-none"><i
-											class="la la-search"></i></button></a>
-							</div>
+							<a href="search-page.html">
+								<div class="input-group">
+									<input type="text" id="chat-search" name="chat-search" class="form-control"
+										placeholder="搜索好物" style="    padding-left: 30px;">
+							</a>
+
+							<span style="position: absolute;padding-top: 7px;padding-left: 10px;
+                                       "><i class="fa fa-search"></i></span>
 						</div>
 					</div>
-					<div class="col-auto">
-						<!-- header menu trigger -->
-						<button class="header-menu-trigger" id="header-menu-trigger">
-							<i class="fas fa-align-right" style="font-size: 20px;
+				</div>
+				<div class="col-auto">
+					<button class="header-menu-trigger" id="header-menu-trigger">
+						<i class="fas fa-align-right" style="font-size: 20px;
                                 color: grey;"></i>
-						</button>
-					</div>
+					</button>
 				</div>
 			</div>
 		</div>
-
 	</header>
 
 
@@ -97,10 +101,9 @@
 						href="shop.html">我租入的物品</a></li>
 				<li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
 						href="order.html">我借出的物品</a></li>
-				<li><span class="icon"><i class="ti ti-heart" style="font-size: 25px;"></i></span><a
-						href="wishlist.html">我的公益</a></li>
 				<li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-						href="login.html">退出登录</a></li>
+						onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -152,7 +155,10 @@
 				</div>
 				<div class="scrolltab-content">
 					<div class="scrolltab-content-item">
-						<h2>排行榜</h2>
+						<span>排行榜</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right"></i>
+						</a>
 						<div>
 							<div class="aui-ad-head clearfix">
 								<a href="shop-product.html">
@@ -193,10 +199,14 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>严选手机</h2>
+						<span>严选手机</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right"></i>
+						</a>
+
 						<div>
 							<div class="aui-class-ad-img">
-								<a href="javascript:;">
+								<a href="category-details.html">
 									<img src="images/ad1.jpg" alt="">
 								</a>
 							</div>
@@ -224,7 +234,10 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>电脑设备</h2>
+						<span>电脑设备</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right"></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
 								<a href="category-details.html">
@@ -249,7 +262,10 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>平板iPad</h2>
+						<span>平板iPad</span>
+							<a href="category-details.html">
+						<i class="ti ti-chevron-right"></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
 								<a href="category-details.html">
@@ -280,7 +296,10 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>相机摄影</h2>
+						<span>相机摄影</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right"></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
 								<a href="category-details.html">
@@ -305,21 +324,24 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>游戏设备</h2>
+						<span>游戏设备</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right" ></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
-								<a href="javascript:;">
+								<a href="category-details.html">
 									<img src="images/ad5.jpg" alt="">
 								</a>
 							</div>
 							<div class="aui-flex-links">
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="images/2.jpg" alt="">
 									</div>
 									<div class="aui-flex-links-text">Switch</div>
 								</a>
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="images/2.jpg" alt="">
 									</div>
@@ -330,21 +352,24 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>耳机乐器</h2>
+						<span>耳机乐器</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right" ></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
-								<a href="javascript:;">
+								<a href="category-details.html">
 									<img src="images/ad6.jpg" alt="">
 								</a>
 							</div>
 							<div class="aui-flex-links">
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="images/3.jpg" alt="">
 									</div>
 									<div class="aui-flex-links-text">蓝牙耳机</div>
 								</a>
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="images/3.jpg" alt="">
 									</div>
@@ -355,21 +380,24 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>手表饰品</h2>
+						<span>手表饰品</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right" ></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
-								<a href="javascript:;">
+								<a href="category-details.html">
 									<img src="images/ad7.jpg" alt="">
 								</a>
 							</div>
 							<div class="aui-flex-links">
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="" alt="">
 									</div>
 									<div class="aui-flex-links-text">早春新品</div>
 								</a>
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="" alt="">
 									</div>
@@ -380,27 +408,30 @@
 						</div>
 					</div>
 					<div class="scrolltab-content-item">
-						<h2>家用电器</h2>
+						<span>家用电器</span>
+						<a href="category-details.html">
+						<i class="ti ti-chevron-right" ></i>
+						</a>
 						<div>
 							<div class="aui-class-ad-img">
-								<a href="javascript:;">
+								<a href="category-details.html">
 									<img src="themes/img/pd/cf-8.jpg" alt="">
 								</a>
 							</div>
 							<div class="aui-flex-links">
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="" alt="">
 									</div>
 									<div class="aui-flex-links-text">冰箱</div>
 								</a>
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="" alt="">
 									</div>
 									<div class="aui-flex-links-text">洗衣机</div>
 								</a>
-								<a href="javascript:;" class="aui-flex-links-item">
+								<a href="category-details.html" class="aui-flex-links-item">
 									<div class="aui-flex-links-img">
 										<img src="" alt="">
 									</div>
@@ -424,7 +455,7 @@
 			<a class="sc-menu-item sc-current" href="goods-category.html"><i class="fas  fa-list"></i></a>
 			<a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
 			<a class="sc-nav-indicator"></a>
-			<a class="sc-menu-item" href="cart.html"><i class="fas fas fa-shopping-cart"></i></a>
+			<a class="sc-menu-item" href="cart.html"><i class="fas fa-clipboard"></i></a>
 			<a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
 		</div>
 
@@ -432,7 +463,7 @@
 
 
 	<!-- Modernizer JS -->
-	<script src="js/script2.js"></script>
+	<script src="js/tabbar.js"></script>
 	<script src="assets/js/modernizr-2.8.3.min.js"></script>
 
 	<!-- Bootstrap JS -->
@@ -448,6 +479,15 @@
 
 	<!-- script js -->
 	<script src="js/script1.js"></script>
+	<script src="js/quantumalert.js"></script>
+	<script>
+		function okFunction() {
+			window.location.href = "login.html";
+		}
+		function cancelFunction() {
+			alert('Cancel!');
+		}
+	</script>
 </body>
 
 </html>

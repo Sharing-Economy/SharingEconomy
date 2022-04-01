@@ -14,15 +14,3 @@ $("#use_password").blur(function () {
 $("#use_password").focus(function(){
     $("#p_password").html("");
   })
-
-//退出登录
-$("#logout").click(function(){
-    $.ajax({
-        type:"POST",
-        url:"/logout",
-        success:function(data){
-            alert("退出成功!");
-            window.location="./share/login.html";
-        }
-    })
-})

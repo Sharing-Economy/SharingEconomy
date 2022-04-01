@@ -9,9 +9,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="HandheldFriendly" content="True">
-
+    <script src="static/js/public.js"></script>
     <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/style3.css">
+   <link rel="stylesheet" href="css/sliderbg.css">
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="css/style1.css">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="static/css/flaticon.css">
     <link rel="stylesheet" href="static/css/responsive.css">
     <!-- 底部导航 -->
-    <link rel="stylesheet" href="css/style2.css">
+   <link rel="stylesheet" href="css/tabbar.css">
     <!-- CSS -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -43,38 +43,39 @@
 
     <header>
         <div class="header-wrapper border-bottom">
-            <div  style="  padding-top: 10px;  padding-right: 8px; padding-bottom: 0px;">
+            <div class="container space-y--15">
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <!-- header logo -->
                         <div class="header-logo">
-                            <a href="index.html"><img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;"></a>
+                            <a href="index.html">
+                                <img src="assets/img/logo.png" class="img-fluid" alt="" style="width: 75px;">
+                            </a>
                         </div>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <!-- header search -->
-                        <div class="header-search">
-                            <div class="input-group">
-                                <input type="text" id="chat-search" name="chat-search" class="form-control"
-                                    placeholder="搜索好物">
-                                <button type="button" class="btn btn-de-primary shadow-none"><i
-                                        class="la la-search"></i></button>
-                            </div>
+                        <!-- 搜索框 -->
+                        <div class="header-search" style="padding-top: 8px;">
+                            <a href="search-page.html">
+                                <div class="input-group">
+                                    <input type="text" id="chat-search" name="chat-search" class="form-control"
+                                        placeholder="搜索好物" style="    padding-left: 30px;">
+                            </a>
 
-
+                            <span style="position: absolute;padding-top: 7px;padding-left: 10px;
+                                       "><i class="fa fa-search"></i></span>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <!-- header menu trigger -->
-                        <button class="header-menu-trigger" id="header-menu-trigger">
-                            <i class="fas fa-align-right" style="font-size: 20px;
-                            color: grey;"></i>
-                        </button>
-                    </div>
+                </div>
+                <div class="col-auto">
+                    <button class="header-menu-trigger" id="header-menu-trigger">
+                        <i class="fas fa-align-right" style="font-size: 20px;padding-right: 8px;
+                            padding-top: 15px;
+                                color: grey;"></i>
+                    </button>
                 </div>
             </div>
         </div>
-
     </header>
     <!--====================  End of header area  ====================-->
     <!--====================  mobile menu overlay ====================-->
@@ -99,15 +100,14 @@
                         href="shop.html">我租入的物品</a></li>
                 <li><span class="icon"><i class="ti ti-box" style="font-size: 25px;"></i></span><a
                         href="order.html">我借出的物品</a></li>
-                <li><span class="icon"><i class="ti ti-heart" style="font-size: 25px;"></i></span><a
-                        href="wishlist.html">我的公益</a></li>
                 <li><span class="icon"><i class="ti ti-power" style="font-size: 25px;"></i></span><a
-                        href="login.html">退出登录</a></li>
+                        onclick="Qual.confirmd('您确定要退出当前账号吗？', '点击OK按钮或者关闭', inf, 'OK', '', 'okFunction', 'cancelFunction')">退出登入</a>
+                </li>
             </ul>
         </div>
     </div>
-  
-   
+
+
     <!-- slider -->
     <div class="slider">
         <ul class="slides">
@@ -148,7 +148,8 @@
                             <h6>佳能相机</h6><span>$13/天</span>
                         </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +158,8 @@
                             <h6>Switch</h6><span>$13/天</span>
                         </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
@@ -168,16 +170,19 @@
                             <h6>蓝牙耳机</h6><span>$13/天</span>
                         </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
                 <div class="col s6">
                     <div class="shop"><a href="shop-product.html"><img src="images/4.jpg" alt="">
-                            <h6>>苹果电脑
-                        </h6><span>$13/天</span></a>
+                            <h6>苹果电脑
+                            </h6><span>$13/天</span>
+                        </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
@@ -188,7 +193,8 @@
                             <h6>iPad Pro</h6><span>$13/天</span>
                         </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
@@ -197,7 +203,8 @@
                             <h6>VR眼镜</h6><span>$13/天</span>
                         </a>
                         <div style="text-align:center;padding: 12px;">
-                            <button class="button-default" onclick="Qual.successd('Success','租用成功');">去租用</button>
+                            <button class="button-default"
+                                onclick="window.location.href = 'shop-product.html'">去租用</button>
                         </div>
                     </div>
                 </div>
@@ -225,7 +232,7 @@
             <a class="sc-menu-item " href="index.html"><i class="fas fa-home"></i></a>
             <a class="sc-menu-item" href="goods-category.html"><i class="fas  fa-list"></i></a>
             <a href="chat.html" class="sc-menu-item "><i class="fas fa-plus"></i></a>
-            <a class="sc-menu-item" href="cart.html"><i class="fas fas fa-shopping-cart"></i></a>
+             <a class="sc-menu-item" href="cart.html"><i class="fas fa-clipboard"></i></a>
             <a class="sc-menu-item" href="ui-me.html"><i class="fas fa-user"></i></a>
         </div>
 
@@ -233,10 +240,10 @@
     <!-- scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/sliderbg.js"></script>
 
     <!-- Modernizer JS -->
-    <script src="js/script2.js"></script>
+    <script src="js/tabbar.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -251,10 +258,10 @@
 
     <!-- script js -->
     <script src="js/script1.js"></script>
-    <script src="js/quantumalert.js"></script>
+    <script src="js/popbox.js"></script>
     <script>
         function okFunction() {
-            alert('OK!');
+            window.location.href = "login.html";
         }
         function cancelFunction() {
             alert('Cancel!');
